@@ -40,6 +40,6 @@ Replace the values in the sample code for:
 4. **Ocp-Apim-Subscription-Key**: the key from your cognitive service
 5. (Optional) you can change the **columnheader** to "Quantity" or "Total" for the example Tesco receipt to extract other entries.
 
-Optionally, if you don't have a trained model, you can use the [Analyzed Tesco Example Reciept in JSON](Tesco_Example_Receipt.json) JSON file and [FormAnalyzer_ExtractColumn_FromJSON](FormAnalyzer_ExtractColumn_FromJSON.py) to iterate over the table results and get used to the model of the results from Azure Form Recognizer.
+Optionally, if you don't need/want to train and analyze with your own model, you can use the [Analyzed Tesco Example Reciept in JSON](Tesco_Example_Receipt.json) file, which is an output from analyzing the example receipt with a model.  [FormAnalyzer_ExtractColumn_FromJSON.py](FormAnalyzer_ExtractColumn_FromJSON.py) is code that iterates over the table results and get used to the model of the results from Azure Form Recognizer.
 
 
