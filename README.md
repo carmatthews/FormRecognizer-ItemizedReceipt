@@ -11,7 +11,7 @@ You need to install Python and setup a Form Recognizer service on Azure.
 ## Train an Azure Form Recognizer Model ##
 In order to train the model, collect 5 examples of the  forms you want to train with and store in Azure Blob storage.  Here are tips for setting up [training data](https://docs.microsoft.com/en-us/azure/cognitive-services/form-recognizer/build-training-data-set).
 
-Follow the instructions to setup your Azure Cognitive Service and create Form Recognizer Resource: [Train a Form Recognizer Model](https://docs.microsoft.com/en-us/azure/cognitive-services/form-recognizer/quickstarts/python-train-extract#train-a-form-recognizer-model). [FormAnalyzer_Train.py](Form_Analyzer_Train.py) is based on the code used for training the model and you can use it for your model with the following changes:  
+Follow the instructions to setup your Azure Cognitive Service and create Form Recognizer Resource: [Train a Form Recognizer Model](https://docs.microsoft.com/en-us/azure/cognitive-services/form-recognizer/quickstarts/python-train-extract#train-a-form-recognizer-model). [FormAnalyzer_Train.py](FormAnalyzer_Train.py) is based on the code used for training the model and you can use it for your model with the following changes:  
 
 Replace the values in the sample code for:
 1. **base_url**: The region your cognitive service is deployed to
@@ -29,9 +29,9 @@ Once you run the code to train your model, you should get a response back that i
 ## Analyze a form and extract items ##
 The next step is to use the model to extract data from a new form.  The steps for getting top level entites are documented in the next section of the quick start <a href="https://docs.microsoft.com/en-us/azure/cognitive-services/form-recognizer/quickstarts/python-train-extract#extract-key-value-pairs-and-tables-from-forms" target="_blank">Extract key-value pairs and tables from forms</a>.
 
-In addition to extracting the table, [FormAnalyzer_ExtractColumn](FormAnalyzer_ExtractColumn.py), iterates over the columns in the table to extract all the entries for one of the columns, giving you a list of those entries.
+In addition to extracting the table, [FormAnalyzer_ExtractColumn.py](FormAnalyzer_ExtractColumn.py), iterates over the columns in the table to extract all the entries for one of the columns, giving you a list of those entries.
 
-An example receipt is included [Tesco Example Receipt](Tesco_Example_Receipt.pdf) that can be processed and the values in the "Product" column are extracted.
+An example receipt is included [Tesco_Receipt_Example.pdf](Tesco_Receipt_Example.pdf) that can be processed and the values in the "Product" column are extracted.
 
 Replace the values in the sample code for:
 1. **base_url**: The region your cognitive service is deployed to
@@ -40,6 +40,6 @@ Replace the values in the sample code for:
 4. **Ocp-Apim-Subscription-Key**: the key from your cognitive service
 5. (Optional) you can change the **columnheader** to "Quantity" or "Total" for the example Tesco receipt to extract other entries.
 
-Optionally, if you don't need/want to train and analyze with your own model, you can use the [Analyzed Tesco Example Reciept in JSON](Tesco_Example_Receipt.json) file, which is an output from analyzing the example receipt with a model.  [FormAnalyzer_ExtractColumn_FromJSON.py](FormAnalyzer_ExtractColumn_FromJSON.py) is code that iterates over the table results and get used to the model of the results from Azure Form Recognizer.
+Optionally, if you don't need/want to train and analyze with your own model, you can use the [Tesco_Receipt_Example.json](Tesco_Receipt_Example.json) file, which is an output from analyzing the example receipt with a model.  [FormAnalyzer_ExtractColumn_FromJSON.py](FormAnalyzer_ExtractColumn_FromJSON.py) is code that iterates over the table results and get used to the model of the results from Azure Form Recognizer.
 
 
