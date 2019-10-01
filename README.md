@@ -1,12 +1,10 @@
 # FormRecognizer-ItemizedReceipt
 Python function for extracting items from a table in a form (in this example, a grocery store receipt) that has been processed with an Azure Form Recognizer model.
 
-## Train and Azure Form Recognizer Model ##
-In order to train the model, collect 5 examples of the  forms you want to train with and store in Azure Blob storage.  Here are tips for setting up 
-<a href="https://docs.microsoft.com/en-us/azure/cognitive-services/form-recognizer/build-training-data-set" target="_blank">training data</a>.
+## Train an Azure Form Recognizer Model ##
+In order to train the model, collect 5 examples of the  forms you want to train with and store in Azure Blob storage.  Here are tips for setting up [training data](https://docs.microsoft.com/en-us/azure/cognitive-services/form-recognizer/build-training-data-set).
 
-Follow the instructions to setup your Azure Cognitive Service and create Form Recognizer Resource: 
-<a href="https://docs.microsoft.com/en-us/azure/cognitive-services/form-recognizer/quickstarts/python-train-extract#train-a-form-recognizer-model" target="_blank">Train a Form Recognizer model</a>. [Form_Analyzer_Train.py](Form_Analyzer_Train.py) is based on the code used for training the model and you can use it for your model with the following changes:  
+Follow the instructions to setup your Azure Cognitive Service and create Form Recognizer Resource: [Train a Form Recognizer Model](https://docs.microsoft.com/en-us/azure/cognitive-services/form-recognizer/quickstarts/python-train-extract#train-a-form-recognizer-model). [Form_Analyzer_Train.py](Form_Analyzer_Train.py) is based on the code used for training the model and you can use it for your model with the following changes:  
 
 Replace the values in the sample code for:
 1. **base_url**: The region your cognitive service is deployed to
