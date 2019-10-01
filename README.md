@@ -6,7 +6,7 @@ You need to install Python and setup a Form Recognizer service on Azure.
 
 1. Instructions for requesting access to Form Recognizer and installing python are [here](https://docs.microsoft.com/en-us/azure/cognitive-services/form-recognizer/quickstarts/python-train-extract#prerequisites).
 
-2. Once you have Form Recognizer access on you Azure subscription, follow these [steps](https://docs.microsoft.com/en-us/azure/cognitive-services/form-recognizer/quickstarts/python-train-extract#create-a-form-recognizer-resource) to setup your service.
+2. Once you have Form Recognizer access in your Azure subscription, follow these [steps](https://docs.microsoft.com/en-us/azure/cognitive-services/form-recognizer/quickstarts/python-train-extract#create-a-form-recognizer-resource) to setup your service.
 
 ## Train an Azure Form Recognizer Model ##
 In order to train the model, collect 5 examples of the  forms you want to train with and store in Azure Blob storage.  Here are tips for setting up [training data](https://docs.microsoft.com/en-us/azure/cognitive-services/form-recognizer/build-training-data-set).
