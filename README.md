@@ -2,9 +2,11 @@
 Python function for extracting items from a table in a form (in this example, a grocery store receipt) that has been processed with an Azure Form Recognizer model.
 
 ## Train and Azure Form Recognizer Model ##
-In order to train the model, collect 5 examples of the  forms you want to train with and store in Azure Blob storage.  Here are tips for setting up [training data:](https://docs.microsoft.com/en-us/azure/cognitive-services/form-recognizer/build-training-data-set)
+In order to train the model, collect 5 examples of the  forms you want to train with and store in Azure Blob storage.  Here are tips for setting up 
+<a href="https://docs.microsoft.com/en-us/azure/cognitive-services/form-recognizer/build-training-data-set" target="_blank">training data</a>.
 
-Follow the instructions to setup your Azure Cognitive Service and create Form Recognizer Resource: [Train a Form Recognizer mode](https://docs.microsoft.com/en-us/azure/cognitive-services/form-recognizer/quickstarts/python-train-extract#train-a-form-recognizer-model). [Form_Analyzer_Train.py](Form_Analyzer_Train.py) includes the code from this document used for training the model.  
+Follow the instructions to setup your Azure Cognitive Service and create Form Recognizer Resource: 
+<a href="https://docs.microsoft.com/en-us/azure/cognitive-services/form-recognizer/quickstarts/python-train-extract#train-a-form-recognizer-model" target="_blank">Train a Form Recognizer model</a>. [Form_Analyzer_Train.py](Form_Analyzer_Train.py) is based on the code used for training the model and you can use it for your model with the following changes:  
 
 Replace the values in the sample code for:
 1. **base_url**: The region your cognitive service is deployed to
@@ -15,12 +17,12 @@ Replace the values in the sample code for:
 The values to replace are all denoted with angle brackets <> - replace the brackets and the sample text. 
 'Ocp-Apim-Subscription-Key': '<replace with your key>'
   should become
- Ocp-Apim-Subscription-Key': '123456789123456789'
+ 'Ocp-Apim-Subscription-Key': '123456789123456789'
 
-Once you run the code to train your model, you should get a response back that includes the ModelID that was created, note this down for the next step.
+Once you run the code to train your model, you should get a response back that includes the ModelID for the model created, note this down for the next step.
 
 ## Analyze a form and extract items ##
-The next step is to use the model to extract data from a new form.  The steps for getting top level entites are documented in the next section of the quick start [Extract key-value pairs and tables from forms](https://docs.microsoft.com/en-us/azure/cognitive-services/form-recognizer/quickstarts/python-train-extract#extract-key-value-pairs-and-tables-from-forms).
+The next step is to use the model to extract data from a new form.  The steps for getting top level entites are documented in the next section of the quick start <a href="https://docs.microsoft.com/en-us/azure/cognitive-services/form-recognizer/quickstarts/python-train-extract#extract-key-value-pairs-and-tables-from-forms" target="_blank">Extract key-value pairs and tables from forms</a>.
 
 In addition to extracting the table, [FormAnalyzer_ExtractColumn](FormAnalyzer_ExtractColumn.py), iterates over the columns in the table to extract all the entries for one of the columns, giving you a list of those entries.
 
