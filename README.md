@@ -44,7 +44,7 @@ Replace the values in the sample code for:
 
 Optionally, if you don't need/want to train and analyze with your own model, you can use the [Tesco_Receipt_Example.json](Tesco_Receipt_Example.json) file, which is an output from analyzing the example receipt with a model I trained.  
 
-![Partial Receipt with Tables - JSON Form Recognizer Results](Table0ExampleJSON.JPG)
+![Partial Receipt with Tables - JSON Form Recognizer Results](JSONTable0Example.JPG)
 
 [FormAnalyzer_ExtractColumn_FromJSON.py](FormAnalyzer_ExtractColumn_FromJSON.py) is code that iterates over the JSON file of the Azure Form Recognizer results and extracts the entries in the column with the header "Product".
 
