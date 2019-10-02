@@ -31,7 +31,9 @@ The next step is to use the model to extract data from a new form.  The steps fo
 
 In addition to extracting the table, [FormAnalyzer_ExtractColumn.py](FormAnalyzer_ExtractColumn.py), iterates over the columns in the table to extract all the entries for one of the columns, giving you a list of those entries.
 
-An example receipt is included [Tesco_Receipt_Example.pdf](Tesco_Receipt_Example.pdf) that can be processed and the values in the "Product" column are extracted.
+An example receipt is included [Tesco_Receipt_Example.pdf](Tesco_Receipt_Example.pdf) that can be processed and the entries in the column with the header "Product" are extracted.
+
+![Partial Receipt with Tables](Table0Example.JPG)
 
 Replace the values in the sample code for:
 1. **base_url**: The region your cognitive service is deployed to
@@ -40,6 +42,10 @@ Replace the values in the sample code for:
 4. **Ocp-Apim-Subscription-Key**: the key from your cognitive service
 5. (Optional) you can change the **columnheader** to "Quantity" or "Total" for the example Tesco receipt to extract other entries.
 
-Optionally, if you don't need/want to train and analyze with your own model, you can use the [Tesco_Receipt_Example.json](Tesco_Receipt_Example.json) file, which is an output from analyzing the example receipt with a model.  [FormAnalyzer_ExtractColumn_FromJSON.py](FormAnalyzer_ExtractColumn_FromJSON.py) is code that iterates over the table results and get used to the model of the results from Azure Form Recognizer.
+Optionally, if you don't need/want to train and analyze with your own model, you can use the [Tesco_Receipt_Example.json](Tesco_Receipt_Example.json) file, which is an output from analyzing the example receipt with a model I trained.  
+
+![Partial Receipt with Tables - JSON Form Recognizer Results](Table0ExampleJSON.JPG)
+
+[FormAnalyzer_ExtractColumn_FromJSON.py](FormAnalyzer_ExtractColumn_FromJSON.py) is code that iterates over the JSON file of the Azure Form Recognizer results and extracts the entries in the column with the header "Product".
 
 
