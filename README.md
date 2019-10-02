@@ -1,5 +1,5 @@
 # FormRecognizer-ItemizedReceipt
-Python example code for extracting items from a table in a form (in this example, a grocery store receipt) that has been processed with an Azure Form Recognizer model.
+Example Python code for extracting items from a table in a form (in this example, a grocery store receipt) that has been processed with an Azure Form Recognizer model.
 
 ## Prerequisites ##
 You need to install Python and setup a Form Recognizer service on Azure.  
